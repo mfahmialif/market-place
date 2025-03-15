@@ -3861,7 +3861,11 @@ table .product-thumbnail img {
 }
 
 .product-cart-wrap .product-stock .status-bar .sold-bar {
-  background-image: linear-gradient(235deg, var(--accent-color) 0%, #77ccfd 100%);
+  background-image: linear-gradient(
+    235deg,
+    var(--accent-color) 0%,
+    #77ccfd 100%
+  );
   border-radius: 4px;
   height: 8px;
 }
@@ -5364,7 +5368,6 @@ h6.post-title {
   font-weight: 600;
 }
 
-
 .header-top-ptb-1 #news-flash li {
   min-height: 14px;
   line-height: 20px !important;
@@ -6105,6 +6108,18 @@ h6.post-title {
   color: var(--accent-color);
   height: 100%;
   padding: 5px 17px;
+}
+
+.header-glass.stick {
+  background: rgba(255, 255, 255, 0.33) !important;
+  border-radius: 0 0 16px 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(7.7px) !important;
+  -webkit-backdrop-filter: blur(7.7px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 1px 6px 29px 0px rgba(0, 0, 0, 0.75) !important;
+  -webkit-box-shadow: 1px 6px 29px 0px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 1px 6px 29px 0px rgba(0, 0, 0, 0.75) !important;
 }
 
 .header-bottom-shadow {
