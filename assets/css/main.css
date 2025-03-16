@@ -4165,6 +4165,8 @@ table .product-thumbnail img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .shop-product-fillter .sort-by-product-area .sort-by-cover {
@@ -8199,6 +8201,67 @@ span.fi-rs-apps {
 .download-app a img.active,
 .download-app a img:hover {
   border: 2px solid var(--accent-color);
+}
+
+#form-donate {
+  display: none;
+}
+.radio-price {
+  display: flex;
+  margin-bottom: 20px;
+}
+.radio-price .radio-item [type="radio"] {
+  display: none;
+}
+.radio-price .radio-item + .radio-item {
+  margin-top: 15px;
+}
+.radio-price .radio-item label {
+  display: block;
+  padding: 20px 60px;
+  background-color: var(--secondary-color);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 250px;
+  white-space: nowrap;
+  position: relative;
+  transition: 0.4s ease-in-out 0s;
+}
+.radio-price .radio-item label:after,
+.radio-price .radio-item label:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.radio-price .radio-item label:after {
+  height: 19px;
+  width: 19px;
+  border: 2px solid var(--accent-color);
+  left: 19px;
+  top: calc(50% - 12px);
+}
+.radio-price .radio-item label:before {
+  background: var(--accent-color);
+  height: 20px;
+  width: 20px;
+  left: 18px;
+  bottom: 41%;
+  top: calc(50%-5px);
+  transform: scale(5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out 0s;
+}
+.radio-price .radio-item [type="radio"]:checked ~ label {
+  border-color: var(--accent-color);
+}
+.radio-price .radio-item [type="radio"]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 
 .footer-list {
