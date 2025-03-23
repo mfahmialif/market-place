@@ -8204,8 +8204,9 @@ span.fi-rs-apps {
 }
 
 #form-donate {
-  display: none;
+  display: block;
 }
+
 .radio-price {
   display: flex;
   margin-bottom: 20px;
