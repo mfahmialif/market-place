@@ -4,6 +4,7 @@ INCLUDE STYLES AND COMPONENTS
 /*import vendors*/
 @import url(vendors/normalize.css);
 @import url(vendors/bootstrap.css);
+@import url(vendors/colors.css);
 @import url(vendors/material-icon-round.css);
 @import url(vendors/perfect-scrollbar.css);
 @import url(vendors/select2.min.css);
@@ -322,19 +323,19 @@ table .form-check {
 }
 
 .text-brand {
-  color: #088178 !important;
+  color: var(--accent-color) !important;
 }
 
 .bg-primary {
-  background-color: rgba(8, 129, 120, 0.2);
+  background-color: var(--secondary-color);
 }
 
 .text-primary {
-  color: #088178 !important;
+  color: var(--accent-color) !important;
 }
 
 .bg-primary-light {
-  background-color: rgba(8, 129, 120, 0.2) !important;
+  background-color: var(--secondary-color) !important;
 }
 
 .screen-overlay {
@@ -490,7 +491,7 @@ table .form-check {
 }
 
 a {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 body {
@@ -622,15 +623,15 @@ b {
 }
 
 .menu-aside .menu-item.active .icon {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 .menu-aside .menu-item.active .menu-link {
-  background-color: rgba(8, 129, 120, 0.2);
+  background-color: var(--secondary-color);
 }
 
 .menu-aside .menu-item.active .submenu a.active {
-  color: #088178 !important;
+  color: var(--accent-color) !important;
 }
 
 .menu-aside .menu-link {
@@ -732,7 +733,7 @@ b {
 .pagination-area .page-item.active .page-link,
 .pagination-area .page-item:hover .page-link {
   color: #fff;
-  background: #088178;
+  background: var(--accent-color);
 }
 
 .pagination-area .page-item .page-link {
@@ -770,8 +771,8 @@ b {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #088178;
-  background-color: rgba(8, 129, 120, 0.2);
+  color: var(--accent-color);
+  background-color: var(--secondary-color);
 }
 
 .btn.btn-primary {
@@ -780,7 +781,7 @@ b {
   padding: 10px 40px;
   color: #ffffff;
   border: none;
-  background-color: #088178;
+  background-color: var(--accent-color);
   border-radius: 4px;
 }
 
@@ -812,7 +813,7 @@ b {
 .btn.btn-md {
   padding: 0.5rem 0.95rem;
   font-weight: 500;
-  background-color: #088178;
+  background-color: var(--accent-color);
   color: #ffffff;
 }
 
@@ -821,7 +822,7 @@ b {
 }
 
 .btn.btn-xs {
-  background-color: #088178;
+  background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   font-size: 11px;
@@ -904,7 +905,7 @@ b {
 }
 
 .btn-light:hover {
-  background-color: #088178;
+  background-color: var(--accent-color);
   color: #fff !important;
 }
 
@@ -937,7 +938,7 @@ b {
 }
 
 .btn-brand {
-  background-color: #088178;
+  background-color: var(--accent-color);
   border: 0;
   color: #fff;
 }
@@ -1014,7 +1015,7 @@ textarea.form-control {
 }
 
 .searchform button:hover {
-  background-color: #088178;
+  background-color: var(--accent-color);
 }
 
 .searchform button:hover i {
@@ -1028,8 +1029,8 @@ textarea.form-control {
 }
 
 .form-check-input:checked {
-  background-color: #088178;
-  border-color: #088178;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /*Nice select*/
@@ -1417,7 +1418,7 @@ textarea.form-control {
 }
 
 .progress-bar {
-  background-color: #088178;
+  background-color: var(--accent-color);
 }
 
 .new-member-list {
@@ -1448,7 +1449,7 @@ textarea.form-control {
 }
 
 .verti-timeline .event-list.active .event-timeline-dot {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 .verti-timeline .event-list:last-child {
@@ -1500,7 +1501,7 @@ textarea.form-control {
 
 .badge.bg-primary[href]:focus,
 .badge.bg-primary[href]:hover {
-  background-color: #088178 !important;
+  background-color: var(--accent-color) !important;
 }
 
 .badge.bg-light {
@@ -1513,13 +1514,13 @@ textarea.form-control {
 }
 
 .badge-soft-primary {
-  color: #088178;
+  color: var(--accent-color);
   background-color: rgba(85, 230, 150, 0.18);
 }
 
 .badge-soft-primary[href]:focus,
 .badge-soft-primary[href]:hover {
-  color: #088178;
+  color: var(--accent-color);
   text-decoration: none;
   background-color: rgba(85, 230, 150, 0.18);
 }
@@ -1916,12 +1917,12 @@ textarea.form-control {
 
 .order-tracking .steps .step.completed .step-icon-wrap::before,
 .order-tracking .steps .step.completed .step-icon-wrap::after {
-  background-color: #088178;
+  background-color: var(--accent-color);
 }
 
 .order-tracking .steps .step.completed .step-icon {
-  border-color: #088178;
-  background-color: #088178;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
   color: #fff;
 }
 
@@ -2188,7 +2189,7 @@ a[class*="card"] {
 }
 
 a[class*="card"]:hover .title {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 /* ITEM LIST */
@@ -2239,7 +2240,7 @@ a[class*="card"]:hover .title {
 }
 
 .itemside a.title:hover {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 a.itemside {
@@ -2293,7 +2294,7 @@ a.itemside:hover .title {
 }
 
 .card-product-grid a.title:hover {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 .card-product-grid:hover {
@@ -2329,7 +2330,7 @@ a.itemside:hover .title {
 .card-user .card-header {
   position: relative;
   height: 100px;
-  background-color: rgba(8, 129, 120, 0.2) !important;
+  background-color: var(--secondary-color) !important;
   text-align: center;
 }
 
@@ -2438,7 +2439,7 @@ ul.row-sm {
   width: 7px;
   border-radius: 100%;
   height: 7px;
-  background: #088178;
+  background: var(--accent-color);
 }
 
 .list-check {
@@ -2475,7 +2476,7 @@ ul.row-sm {
 
 .list-normal li:before {
   content: "\2022";
-  color: #088178;
+  color: var(--accent-color);
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -2496,7 +2497,7 @@ ul.row-sm {
 }
 
 .list-menu a:hover {
-  color: #088178;
+  color: var(--accent-color);
 }
 
 .cols-two {
@@ -4142,7 +4143,7 @@ body.offcanvas-active {
   line-height: 17px;
   display: block;
   padding: 0;
-  background-color: #088178;
+  background-color: var(--accent-color);
 }
 
 .main-header .nav-item.dropdown {
@@ -4151,7 +4152,7 @@ body.offcanvas-active {
 
 .main-header .nav-link:hover {
   background-color: transparent;
-  color: #088178;
+  color: var(--accent-color);
 }
 
 .main-header .col-search {
@@ -4179,7 +4180,7 @@ body.offcanvas-active {
 }
 
 .nav-item img.rounded-circle:hover {
-  border-color: #088178;
+  border-color: var(--accent-color);
 }
 
 .content-header {
