@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Pustaka Tropis</title>
-    <base href="/home/">
+    <base href="/home/" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -362,11 +362,16 @@
                     class="input-search"
                     placeholder="Search for items…"
                   />
+                  <input
+                    type="hidden"
+                    name="departemen_id"
+                    id="mobile_category_id"
+                  />
                   <div class="search-icon">
                     <button type="submit" class="item">
                       <i class="fi-rs-search"></i>
                     </button>
-                    <button type="submit" class="item">
+                    <button type="button" class="item btn-filter" id="btn-filter">
                       <i class="fi-rs-filter"></i>
                     </button>
                   </div>
@@ -487,6 +492,57 @@
               ><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""
             /></a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mobile-filter-active mobile-header-wrapper-style"
+      style="right: 0"
+    >
+      <div class="mobile-header-wrapper-inner">
+        <div class="mobile-header-top">
+          <div class="mobile-header-logo">
+            <a href="#"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+          </div>
+          <div
+            class="mobile-menu-close close-style-wrap close-style-position-inherit"
+          >
+            <button class="close-style search-close">
+              <i class="icon-top"></i>
+              <i class="icon-bottom"></i>
+            </button>
+          </div>
+        </div>
+        <div class="mobile-header-content-area">
+          <div class="main-categori-wrap mobile-header-border">
+            <a class="categori-button-active-2" href="#">
+              <span class="fi-rs-apps"></span> Pilih Kategori
+            </a>
+          </div>
+
+          <div class="radio-price">
+            <div class="radio-list">
+              <div class="radio-item">
+                <input
+                  name="mobile_category_id"
+                  id="dep"
+                  type="radio"
+                  value=""
+                />
+                <label for="dep">
+                  <p class="text-bold">asd</p>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-100" id="btn-submit-filter">
+            Filter
+          </button>
+          <button class="btn bg-danger w-100 mt-3" id="btn-delete-filter">
+            Hapus Filter
+          </button>
         </div>
       </div>
     </div>

@@ -8,8 +8,8 @@
     });
   });
   /*-----------------
-        Menu Stick
-    -----------------*/
+      Menu Stick
+  -----------------*/
   var header = $(".sticky-bar");
   var win = $(window);
   win.on("scroll", function () {
@@ -339,8 +339,8 @@
   });
 
   /*----------------------------
-        Category toggle function
-    ------------------------------*/
+      Category toggle function
+  ------------------------------*/
   var searchToggle = $(".categori-button-active");
   searchToggle.on("click", function (e) {
     e.preventDefault();
@@ -354,8 +354,8 @@
   });
 
   /*---------------------
-        Price range
-    --------------------- */
+      Price range
+  --------------------- */
   var sliderrange = $("#slider-range");
   var amountprice = $("#amount");
   $(function () {
@@ -377,8 +377,8 @@
   });
 
   /*-------------------------------
-        Sort by active
-    -----------------------------------*/
+      Sort by active
+  -----------------------------------*/
   if ($(".sort-by-product-area").length) {
     var $body = $("body"),
       $cartWrap = $(".sort-by-product-area"),
@@ -415,8 +415,8 @@
   }
 
   /*-----------------------
-        Shop filter active
-    ------------------------- */
+      Shop filter active
+  ------------------------- */
   $(".shop-filter-toogle").on("click", function (e) {
     e.preventDefault();
     $(".shop-product-fillter-header").slideToggle();
@@ -427,8 +427,8 @@
   });
 
   /*-------------------------------------
-        Product details big image slider
-    ---------------------------------------*/
+      Product details big image slider
+  ---------------------------------------*/
   $(".pro-dec-big-img-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -439,8 +439,8 @@
   });
 
   /*---------------------------------------
-        Product details small image slider
-    -----------------------------------------*/
+      Product details small image slider
+  -----------------------------------------*/
   $(".product-dec-slider-small").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -472,8 +472,8 @@
   });
 
   /*-----------------------
-        Magnific Popup
-    ------------------------*/
+      Magnific Popup
+  ------------------------*/
   $(".img-popup").magnificPopup({
     type: "image",
     gallery: {
@@ -494,8 +494,8 @@
   });
 
   /*---------------------
-        Select active
-    --------------------- */
+      Select active
+  --------------------- */
   $(".select-active").select2();
 
   /*--- Checkout toggle function ----*/
@@ -511,8 +511,8 @@
   });
 
   /*-------------------------
-        Create an account toggle
-    --------------------------*/
+      Create an account toggle
+  --------------------------*/
   $(".checkout-toggle2").on("click", function () {
     $(".open-toggle2").slideToggle(1000);
   });
@@ -522,8 +522,8 @@
   });
 
   /*-------------------------------------
-        Checkout paymentMethod function
-    ---------------------------------------*/
+      Checkout paymentMethod function
+  ---------------------------------------*/
   paymentMethodChanged();
   function paymentMethodChanged() {
     var $order_review = $(".payment-method");
@@ -599,9 +599,76 @@
   }
   mobileHeaderActive();
 
+  /*====== Sidebar filter mobile Active ======*/
+  function mobileFilterActive() {
+    var navbarTrigger = $(".btn-filter"),
+      endTrigger = $(".mobile-menu-close"),
+      container = $(".mobile-filter-active"),
+      wrapper4 = $("body");
+
+    navbarTrigger.on("click", function (e) {
+      e.preventDefault();
+      container.addClass("sidebar-visible");
+      wrapper4.addClass("mobile-menu-active");
+    });
+
+    endTrigger.on("click", function () {
+      container.removeClass("sidebar-visible");
+      wrapper4.removeClass("mobile-menu-active");
+    });
+
+    $(".body-overlay-1").on("click", function () {
+      container.removeClass("sidebar-visible");
+      wrapper4.removeClass("mobile-menu-active");
+    });
+  }
+  mobileFilterActive();
+
+  $("#btn-submit-filter").click(function (e) {
+    var container = $(".mobile-filter-active"),
+      wrapper4 = $("body");
+
+    container.removeClass("sidebar-visible");
+    wrapper4.removeClass("mobile-menu-active");
+  });
+
+  $('input[name="mobile_category_id"]').on("change", function () {
+    var btnFilter = $("#btn-filter");
+
+    var content = `
+          <span id="filter-checked"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              <i class="fi-rs-check"></i>
+          </span>
+      `;
+
+    var checkedDepartemen = $('input[name="mobile_category_id"]:checked');
+    if (checkedDepartemen.length > 0) {
+      btnFilter.append(content);
+      $('#form-mobile-filter input[name="departemen_id"]').val(
+        checkedDepartemen.val()
+      );
+    } else {
+      $("#filter-checked").remove();
+    }
+  });
+
+  $("#btn-delete-filter").click(function (e) {
+    e.preventDefault();
+    $('input[name="mobile_category_id"]').prop("checked", false);
+    $("#filter-checked").remove();
+    $('#form-mobile-filter input[name="departemen_id"]').val("");
+
+    var container = $(".mobile-filter-active"),
+      wrapper4 = $("body");
+
+    container.removeClass("sidebar-visible");
+    wrapper4.removeClass("mobile-menu-active");
+  });
+
   /*---------------------
-        Mobile menu active
-    ------------------------ */
+      Mobile menu active
+  ------------------------ */
   var $offCanvasNav = $(".mobile-menu"),
     $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
 
@@ -691,10 +758,19 @@
 
   $('input[name="radio"]').change(function () {
     if ($("#price-free").is(":checked")) {
-        $('#form-donate').slideDown();
-        $('#donate').focus();
+      $("#form-donate").slideDown();
+      $("#donate").focus();
     } else {
-        $('#form-donate').slideUp();
+      $("#form-donate").slideUp();
     }
+  });
+
+  $(document).on("select2:open", () => {
+    setTimeout(() => {
+      const searchInput = document.querySelector(
+        ".select2-container--open .select2-search__field"
+      );
+      if (searchInput) searchInput.focus();
+    }, 200);
   });
 })(jQuery);
