@@ -1,0 +1,52 @@
+/* Bungkus agar panah bisa keluar dari area slide */
+.swiper-wrapper-outer {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.swiper.slideHero {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  width: 50%;
+  margin-top: 15px;
+  border-radius: 20px;
+}
+
+.swiper-slide.slideHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroNext,
+.heroPrev {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-gradiant);
+  border-radius: 50%;
+  border: none;
+  color: var(--bg-color-2);
+  font-weight: bold;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.heroNext:after,
+.heroPrev:after {
+  font-size: 16px;
+}
+
+.heroNext:hover,
+.heroPrev:hover {
+  background: var(--bg-color-2);
+  color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .swiper.slideHero {
+    width: 95%;
+    height: 200px;
+  }
+}

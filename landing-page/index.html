@@ -25,6 +25,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="assets/dist/css/animation.css" />
+  <link rel="stylesheet" href="assets/dist/css/hero-slide.css" />
+  <style>
+    @media (min-width: 768px) {
+      .serviceSingle {
+        display: flex;
+        flex-direction: column;
+        min-height: 450px;
+        /* Sesuaikan ini jika butuh lebih tinggi */
+        transition: all 0.3s ease-in-out;
+      }
+
+      .fm-button-2 {
+        margin-top: auto;
+      }
+
+      .innerServiceCard {
+        min-height: 340px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -97,15 +117,15 @@
                 </li>
 
                 <li>
-                  <a class="menuText" href="#reviews">
-                    <span class="menuTextInner menuBarDesktop">Testimoni</span>
+                  <a class="menuText" href="#merchandise">
+                    <span class="menuTextInner menuBarDesktop">Merchandise</span>
                     <span class="duplicateText"></span>
                   </a>
                 </li>
 
                 <li>
-                  <a class="menuText" href="#mitra">
-                    <span class="menuTextInner menuBarDesktop">Mitra</span>
+                  <a class="menuText" href="#media">
+                    <span class="menuTextInner menuBarDesktop">Media Kami</span>
                     <span class="duplicateText"></span>
                   </a>
                 </li>
@@ -169,14 +189,14 @@
                     </a>
                   </li>
                   <li>
-                    <a class="menuText" href="#reviews">
-                      <span class="menuTextInner menuBarMobile">Testimoni</span>
+                    <a class="menuText" href="#merchandise">
+                      <span class="menuTextInner menuBarMobile">Merchandise</span>
                       <span class="duplicateText"></span>
                     </a>
                   </li>
                   <li class="dropdown">
-                    <a href="#mitra" class="menuText">
-                      <span class="menuTextInner menuBarMobile">Mitra</span>
+                    <a href="#media" class="menuText">
+                      <span class="menuTextInner menuBarMobile">Media Kami</span>
                       <span class="duplicateText"></span></a>
                   </li>
                 </ul>
@@ -193,14 +213,17 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="tagline2">Pustaka Tropis</div>
-
-                <div class="rating">
-                  <h5 class="ratingHeading">4.7+</h5>
-                  <div class="d-flex gap-1">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                <div class="swiper slideHero">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slideHero"><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></div>
+                    <div class="swiper-slide slideHero"><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></div>
+                    <div class="swiper-slide slideHero"><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></div>
                   </div>
+
+                  <!-- Navigasi & Pagination -->
+                  <div class="swiper-button-next heroNext"></div>
+                  <div class="swiper-button-prev heroPrev"></div>
+                  <div class="swiper-pagination heroPagination"></div>
                 </div>
                 <h1 class="fm-h1 text-center">
                   Edukasi Konservasi Ekosistem Tropis
@@ -210,10 +233,6 @@
                   melalui koneksi yang kolaboratif dan edukasi yang menginspirasi untuk kelestarian ekosistem Tropis
                   yang berkelanjutan.
                 </p>
-                <form class="subscribe">
-                  <input type="email" placeholder="Ketik email disini" />
-                  <button>Langganan Sekarang</button>
-                </form>
 
                 <ul class="list-unstyled fm-list-4">
                   <li><i class="fa-solid fa-circle-check"></i>Edukasi</li>
@@ -263,19 +282,25 @@
                   <div class="serviceIcon">
                     <img src="assets/images/announcement.png" alt="announcement" />
                   </div>
-                  <h3 class="fm-h3 m-0">Edukasi Lingkungan</h3>
-                  <p class="fm-desc">Kami menyebarkan kesadaran akan pentingnya hutan tropis.</p>
-                  <div>
-                    <ul class="list-unstyled fm-list fm-list-2 collapse mt-2" id="list1">
-                      <li><i class="fa-solid fa-check"></i>Implementasi edukasi konservasi dengan berbagai Platform
-                        Media sosial</li>
-                      <li><i class="fa-solid fa-check"></i>Kisah konservasi dan inovatif</li>
-                      <li><i class="fa-solid fa-check"></i>Publikasi melalui buku dan jurnal</li>
-                      <li><i class="fa-solid fa-check"></i>Workshop dan seminar</li>
-                    </ul>
+                  <div class="d-flex flex-column justify-content-between innerServiceCard">
+
+                    <div>
+                      <h3 class="fm-h3 m-0">Edukasi Lingkungan</h3>
+                      <p class="fm-desc">Kami menyebarkan kesadaran akan pentingnya hutan tropis.</p>
+                      <small>Klik tombol untuk selengkapnya...</small>
+                    </div>
+                    <div>
+                      <ul class="list-unstyled fm-list fm-list-2 collapse mt-2" id="list1">
+                        <li><i class="fa-solid fa-check"></i>Implementasi edukasi konservasi dengan berbagai Platform
+                          Media sosial</li>
+                        <li><i class="fa-solid fa-check"></i>Kisah konservasi dan inovatif</li>
+                        <li><i class="fa-solid fa-check"></i>Publikasi melalui buku dan jurnal</li>
+                        <li><i class="fa-solid fa-check"></i>Workshop dan seminar</li>
+                      </ul>
+                    </div>
+                    <a data-bs-toggle="collapse" href="#list1" role="button" aria-expanded="false" aria-controls="list1"
+                      class="mt-5 fm-button-2"><i class="fa-solid fa-down-long"></i></a>
                   </div>
-                  <a data-bs-toggle="collapse" href="#list1" role="button" aria-expanded="false" aria-controls="list1"
-                    class="mt-5 fm-button-2"><i class="fa-solid fa-right-long"></i></a>
                 </div>
               </div>
 
@@ -285,20 +310,25 @@
                   <div class="serviceIcon">
                     <img src="assets/images/announcement.png" alt="announcement" />
                   </div>
-                  <h3 class="fm-h3 m-0">Konservasi Alam</h3>
-                  <p class="fm-desc">Kami aktif dalam pelestarian flora dan fauna di ekosistem tropis.</p>
-                  <div>
-                    <ul class="list-unstyled fm-list fm-list-2 collapse mt-2" id="list2">
-                      <li><i class="fa-solid fa-check"></i>Konservasi Biodiversity</li>
-                      <li><i class="fa-solid fa-check"></i>Konservasi Satwaliar</li>
-                      <li><i class="fa-solid fa-check"></i>Konservasi Habitat Orangutan</li>
-                      <li><i class="fa-solid fa-check"></i>Konservasi Kualitas Air dan Sungai</li>
-                      <li><i class="fa-solid fa-check"></i>Koservasi HCV (High Conservation Value)</li>
-                      <li><i class="fa-solid fa-check"></i>Konservasi Multilandskap</li>
-                    </ul>
+                  <div class="d-flex flex-column justify-content-between innerServiceCard">
+                    <div>
+                      <h3 class="fm-h3 m-0">Konservasi Alam</h3>
+                      <p class="fm-desc">Kami aktif dalam pelestarian flora dan fauna di ekosistem tropis.</p>
+                      <small>Klik tombol untuk selengkapnya...</small>
+                    </div>
+                    <div>
+                      <ul class="list-unstyled fm-list fm-list-2 collapse mt-2" id="list2">
+                        <li><i class="fa-solid fa-check"></i>Konservasi Biodiversity</li>
+                        <li><i class="fa-solid fa-check"></i>Konservasi Satwaliar</li>
+                        <li><i class="fa-solid fa-check"></i>Konservasi Habitat Orangutan</li>
+                        <li><i class="fa-solid fa-check"></i>Konservasi Kualitas Air dan Sungai</li>
+                        <li><i class="fa-solid fa-check"></i>Koservasi HCV (High Conservation Value)</li>
+                        <li><i class="fa-solid fa-check"></i>Konservasi Multilandskap</li>
+                      </ul>
+                    </div>
+                    <a data-bs-toggle="collapse" href="#list2" role="button" aria-expanded="false" aria-controls="list2"
+                      class="mt-5 fm-button-2"><i class="fa-solid fa-down-long"></i></a>
                   </div>
-                  <a data-bs-toggle="collapse" href="#list2" role="button" aria-expanded="false" aria-controls="list2"
-                    class="mt-5 fm-button-2"><i class="fa-solid fa-right-long"></i></a>
                 </div>
               </div>
 
@@ -308,34 +338,44 @@
                   <div class="serviceIcon">
                     <img src="assets/images/announcement.png" alt="announcement" />
                   </div>
-                  <h3 class="fm-h3 m-0">Riset & Inovasi</h3>
-                  <p class="fm-desc">Kami mendukung penelitian untuk keberlanjutan ekosistem tropis.</p>
-                  <div>
-                    <ul class="list-unstyled fm-list fm-list-2 collapse mt-2" id="list3">
-                      <li><i class="fa-solid fa-check"></i>Model konservasi sekala lapangan</li>
-                      <li><i class="fa-solid fa-check"></i>Memetakan biodiversity baseline hutan hujan tropis</li>
-                      <li><i class="fa-solid fa-check"></i>Menyusun database sebaran dan populasi orangutan Kalimantan
-                        Timur</li>
-                      <li><i class="fa-solid fa-check"></i>Sebaran keragaman hayati endemik di lanskap sekitaran
-                        Kalimantan Timur</li>
-                      <li><i class="fa-solid fa-check"></i>Mengembangkan SOP Konservasi</li>
-                    </ul>
+                  <div class="d-flex flex-column justify-content-between innerServiceCard">
+                    <div>
+                      <h3 class="fm-h3 m-0">Riset & Inovasi</h3>
+                      <p class="fm-desc">Kami mendukung penelitian untuk keberlanjutan ekosistem tropis.</p>
+                      <small>Klik tombol untuk selengkapnya...</small>
+                    </div>
+                    <div>
+                      <ul class="list-unstyled fm-list fm-list-2 collapse mt-2" id="list3">
+                        <li><i class="fa-solid fa-check"></i>Model konservasi sekala lapangan</li>
+                        <li><i class="fa-solid fa-check"></i>Memetakan biodiversity baseline hutan hujan tropis</li>
+                        <li><i class="fa-solid fa-check"></i>Menyusun database sebaran dan populasi orangutan Kalimantan
+                          Timur</li>
+                        <li><i class="fa-solid fa-check"></i>Sebaran keragaman hayati endemik di lanskap sekitaran
+                          Kalimantan Timur</li>
+                        <li><i class="fa-solid fa-check"></i>Mengembangkan SOP Konservasi</li>
+                      </ul>
+                    </div>
+                    <a data-bs-toggle="collapse" href="#list3" role="button" aria-expanded="false" aria-controls="list3"
+                      class="mt-5 fm-button-2"><i class="fa-solid fa-down-long"></i></a>
                   </div>
-                  <a data-bs-toggle="collapse" href="#list3" role="button" aria-expanded="false"
-                  aria-controls="list3" class="mt-5 fm-button-2"><i class="fa-solid fa-right-long"></i></a>
                 </div>
               </div>
 
               <!-- Service Card -->
               <div class="col-md-3 tab-50 sm-100">
-                <div class="serviceSingle pb-4">
+                <div class="serviceSingle pb-4 ">
                   <div class="serviceIcon">
                     <img src="assets/images/announcement.png" alt="announcement" />
                   </div>
-                  <h3 class="fm-h3 m-0">Berkala</h3>
-                  <p class="fm-desc">Berita Konservasi Alam Nusantara.</p>
-                  <a data-bs-toggle="collapse" href="#list4" role="button" aria-expanded="false"
-                  aria-controls="list4" class="mt-5 fm-button-2"><i class="fa-solid fa-right-long"></i></a>
+                  <div class="d-flex flex-column justify-content-between innerServiceCard">
+                    <div>
+                      <h3 class="fm-h3 m-0">Berkala</h3>
+                      <p class="fm-desc">Berita Konservasi Alam Nusantara.</p>
+                      <small>Klik tombol untuk selengkapnya...</small>
+                    </div>
+                    <a data-bs-toggle="collapse" href="#list4" role="button" aria-expanded="false" aria-controls="list4"
+                      class="mt-5 fm-button-2"><i class="fa-solid fa-down-long"></i></a>
+                  </div>
                 </div>
               </div>
 
@@ -343,7 +383,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- About -->
       <section class="aboutAgency" id="about">
@@ -386,8 +425,8 @@
                   <i class="fa-solid fa-circle-check"></i>Tiktok
                 </li>
               </ul>
-              <a href="#gallery" class="mt-5 fm-button">Baca selengkapnya
-                <span><i class="fa-solid fa-arrow-right"></i><i class="fa-solid fa-arrow-right"></i></span></a>
+              <!-- <a href="#gallery" class="mt-5 fm-button">Baca selengkapnya
+                <span><i class="fa-solid fa-arrow-right"></i><i class="fa-solid fa-arrow-right"></i></span></a> -->
             </div>
           </div>
         </div>
@@ -688,108 +727,88 @@
           </div>
         </section> -->
 
-      <!-- testimonials  -->
-      <section id="reviews" class="fm-testimonials fm-padding">
+      <!-- merchandise section -->
+      <section id="merchandise" class="fm-testimonials fm-padding">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-9">
               <div class="swiper testimonials">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide swiper-slide-active">
-                    <div class="row h-100 align-items-center">
-                      <div class="col-md-7">
-                        <div class="tagline">
-                          <img src="assets/images/star.png" alt="Star" />
-                          <p>Edukasi Konservasi Ekosistem Tropis</p>
-                        </div>
-                        <h2 class="fm-h2">Testimoni dari Mitra</h2>
-                        <p class="fm-desc">
-                          Pustaka Tropis telah membantu kami dalam upaya
-                          konservasi dan edukasi lingkungan. Program yang
-                          mereka jalankan sangat berdampak positif bagi
-                          pelestarian ekosistem tropis dan komunitas lokal.
-                        </p>
-                        <div class="stars mt-4">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="clientName mt-3">
-                          Budi Santoso<span> . Mitra Konservasi</span>
-                        </p>
-                      </div>
-                      <div class="col-md-5 position-relative">
-                        <img class="qouteSign" src="assets/images/testimonials/qouteSign.png" alt="Qoute" />
-                        <img class="testimonialImg" src="assets/images/testimonials/t1.jpg" />
-                      </div>
-                    </div>
-                  </div>
+
+                  <!-- Slide 1 -->
                   <div class="swiper-slide">
                     <div class="row h-100 align-items-center">
                       <div class="col-md-7">
                         <div class="tagline">
                           <img src="assets/images/star.png" alt="Star" />
-                          <p>Edukasi Konservasi Ekosistem Tropis</p>
+                          <p>Merchandise Pustaka Tropis</p>
                         </div>
-                        <h2 class="fm-h2">Testimoni dari Relawan</h2>
+                        <h2 class="fm-h2">Kenakan Gaya, Dukung Konservasi</h2>
                         <p class="fm-desc">
-                          Menjadi bagian dari Pustaka Tropis adalah pengalaman
-                          luar biasa. Saya belajar banyak tentang konservasi
-                          dan bagaimana menjaga hutan tropis tetap lestari.
+                          Beli kaos & totebag ramah lingkungan untuk bantu pelestarian hutan.
                         </p>
-                        <div class="stars mt-4">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star-half"></i>
-                        </div>
-                        <p class="clientName mt-3">
-                          Siti Aisyah<span> . Relawan</span>
+                        <p class="clientName mt-4">
+                          Ayo dukung gerakan kami melalui produk penuh makna 🌿
                         </p>
                       </div>
                       <div class="col-md-5 position-relative">
-                        <img class="qouteSign" src="assets/images/testimonials/qouteSign.png" alt="Qoute" />
-                        <img class="testimonialImg" src="assets/images/testimonials/t2.jpg" />
+                        <img class="qouteSign" src="assets/images/testimonials/qouteSign.png" alt="Quote" />
+                        <img class="testimonialImg" src="assets/images/testimonials/t1.jpg" alt="Merchandise" />
                       </div>
                     </div>
                   </div>
+
+                  <!-- Slide 2 -->
                   <div class="swiper-slide">
                     <div class="row h-100 align-items-center">
                       <div class="col-md-7">
                         <div class="tagline">
                           <img src="assets/images/star.png" alt="Star" />
-                          <p>Edukasi Konservasi Ekosistem Tropis</p>
+                          <p>Koleksi Eksklusif</p>
                         </div>
-                        <h2 class="fm-h2">Testimoni dari Akademisi</h2>
+                        <h2 class="fm-h2">Merchandise dengan Misi</h2>
                         <p class="fm-desc">
-                          Pustaka Tropis memberikan kontribusi besar dalam
-                          penelitian ekologi tropis. Program mereka sangat
-                          mendukung akademisi dan mahasiswa yang ingin
-                          memahami lebih dalam tentang konservasi.
+                          Tunjukkan dukunganmu lewat desain bertema alam yang bermakna.
                         </p>
-                        <div class="stars mt-4">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
+                        <p class="clientName mt-4">
+                          Merchandise kami adalah cara sederhana untuk ikut menyuarakan cinta terhadap alam 🌱
+                        </p>
+                      </div>
+                      <div class="col-md-5 position-relative">
+                        <img class="qouteSign" src="assets/images/testimonials/qouteSign.png" alt="Quote" />
+                        <img class="testimonialImg" src="assets/images/testimonials/t2.jpg" alt="Merchandise" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <div class="row h-100 align-items-center">
+                      <div class="col-md-7">
+                        <div class="tagline">
+                          <img src="assets/images/star.png" alt="Star" />
+                          <p>Gabung Dalam Gerakan</p>
                         </div>
-                        <p class="clientName mt-3">
-                          Dr. Rudi Hartanto<span> . Peneliti Ekologi</span>
+                        <h2 class="fm-h2">Dukung Lewat Merchandise</h2>
+                        <p class="fm-desc">
+                          Jadilah bagian dari perubahan lewat pembelian yang berdampak.
+                        </p>
+                        <p class="clientName mt-4">
+                          Setiap item punya cerita. Setiap pembelian punya dampak. 💚
                         </p>
                       </div>
                       <div class="col-md-5 tab-none position-relative">
-                        <img class="qouteSign" src="assets/images/testimonials/qouteSign.png" alt="Qoute" />
-                        <img class="testimonialImg" src="assets/images/testimonials/t3.jpg" />
+                        <img class="qouteSign" src="assets/images/testimonials/qouteSign.png" alt="Quote" />
+                        <img class="testimonialImg" src="assets/images/testimonials/t3.jpg" alt="Merchandise" />
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
+
+            <!-- Thumbnails & Navigation -->
             <div class="col-md-3 tab-none position-relative">
               <div thumbsSlider="" class="swiper testimonialsThumb">
                 <div class="swiper-wrapper">
@@ -818,84 +837,43 @@
         </div>
       </section>
 
-      <!-- Mitra -->
-      <section id="mitra" class="fm-skills fm-margin">
+      <!-- Our Media -->
+      <section id="media" class="fm-skills fm-margin">
         <div class="container">
-          <div class="tagline">
+          <div class="tagline text-center">
             <img src="assets/images/star.png" alt="Star" />
             <p>Edukasi Konservasi Ekosistem Tropis</p>
           </div>
-          <h2 class="fm-h2">Mitra Kami</h2>
-          <div class="row mt-4 pt-2">
-            <div class="col-md-6 h-100 tab-lg-100">
-              <div class="row">
-                <div class="col-md-5 h-100 mb-4">
-                  <div class="skillBlock flex-column h-100">
-                    <img src="assets/images/skills/stack.png" alt="skill" />
-                    <article>
-                      <h3 class="fm-h3 m-0 text-center">Stack</h3>
-                      <p class="fm-desc p-0">Great Team</p>
-                    </article>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="col-md-12 mb-4">
-                    <div class="skillBlock ps-5">
-                      <img src="assets/images/skills/py.png" alt="skill" />
-                      <article>
-                        <h3 class="fm-h3 m-0">Python</h3>
-                        <p class="fm-desc p-0">Great Language</p>
-                      </article>
-                    </div>
-                  </div>
-                  <div class="col-md-12 mb-4">
-                    <div class="skillBlock ps-5">
-                      <img src="assets/images/skills/discord.png" alt="skill" />
-                      <article>
-                        <h3 class="fm-h3 m-0">Discord</h3>
-                        <p class="fm-desc p-0">Great SM</p>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <h2 class="fm-h2 mb-5">Our Media</h2>
+          <div class="row text-center">
+            <div class="col-md-4 mb-4">
+              <a href="https://www.instagram.com/pustakatropis__/" target="_blank"
+                class="skillBlock d-flex flex-column align-items-center justify-content-center p-4 rounded shadow-lg transition-transform transform-hover">
+                <i class="fa-brands fa-instagram fa-4x mb-3 text-primary"></i>
+                <h3 class="fm-h3 m-0">Instagram</h3>
+                <p class="fm-desc p-0">Visual journey of our conservation efforts</p>
+              </a>
             </div>
-            <div class="col-md-6 h-100 tab-lg-100">
-              <div class="row">
-                <div class="col-md-5 h-100 mb-4">
-                  <div class="skillBlock flex-column h-100">
-                    <img src="assets/images/skills/gcloud.png" alt="skill" />
-                    <article>
-                      <h3 class="fm-h3 m-0 text-center">Google Cloud</h3>
-                      <p class="fm-desc text-center p-0">Great Cloud</p>
-                    </article>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="col-md-12 mb-4">
-                    <div class="skillBlock ps-5">
-                      <img src="assets/images/skills/x.png" alt="skill" />
-                      <article>
-                        <h3 class="fm-h3 m-0">Twitter</h3>
-                        <p class="fm-desc p-0">Great SM</p>
-                      </article>
-                    </div>
-                  </div>
-                  <div class="col-md-12 mb-4">
-                    <div class="skillBlock ps-5">
-                      <img src="assets/images/skills/insta.png" alt="skill" />
-                      <article>
-                        <h3 class="fm-h3 m-0">Instagram</h3>
-                        <p class="fm-desc p-0">Great SM</p>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-4 mb-4">
+              <a href="https://www.youtube.com/@pustakatropis5408" target="_blank"
+                class="skillBlock d-flex flex-column align-items-center justify-content-center p-4 rounded shadow-lg transition-transform transform-hover">
+                <i class="fa-brands fa-youtube fa-4x mb-3 text-danger"></i>
+                <h3 class="fm-h3 m-0">YouTube</h3>
+                <p class="fm-desc p-0">Watch our conservation stories & events</p>
+              </a>
+            </div>
+            <div class="col-md-4 mb-4">
+              <a href="https://www.tiktok.com/@pustaka.tropis" target="_blank"
+                class="skillBlock d-flex flex-column align-items-center justify-content-center p-4 rounded shadow-lg transition-transform transform-hover">
+                <i class="fa-brands fa-tiktok fa-4x mb-3 text-secondary"></i>
+                <h3 class="fm-h3 m-0">TikTok</h3>
+                <p class="fm-desc p-0">Short clips to inspire action 🌿</p>
+              </a>
             </div>
           </div>
         </div>
       </section>
+
 
       <footer class="fm-footer">
         <div class="container">
@@ -919,7 +897,7 @@
               </div>
               <div class="col-md-7">
                 <div class="row">
-                  <div class="col-md-4 tab-50">
+                  <div class="col-md-6 tab-50">
                     <h4 class="fm-h4 mb-5 headingLight">Jelajahi</h4>
                     <ul class="list-unstyled footerLinks">
                       <li>
@@ -941,76 +919,38 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#mitra">
+                        <a href="#media">
                           <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Mitra Kami</span>
+                          <span class="linkTxt">Media Kami</span>
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div class="col-md-4 tab-50">
+                  <div class="col-md-6 tab-50">
                     <h4 class="fm-h4 mb-5 headingLight">Informasi</h4>
                     <ul class="list-unstyled footerLinks">
                       <li>
-                        <a href="#blog">
+                        <a href="/home">
                           <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Blog</span>
+                          <span class="linkTxt">Jual Foto</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#penelitian">
+                        <a href="/auth/login">
                           <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Penelitian</span>
+                          <span class="linkTxt">Masuk</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#event">
+                        <a href="/auth/register">
                           <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Event</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#kontak">
-                          <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Kontak Kami</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-4 tab-50">
-                    <h4 class="fm-h4 mb-5 headingLight">Dukungan</h4>
-                    <ul class="list-unstyled footerLinks">
-                      <li>
-                        <a href="#donasi">
-                          <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Donasi</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#volunteer">
-                          <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Jadi Relawan</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#faq">
-                          <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">FAQ</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#terms">
-                          <img src="assets/images/arrow.png" alt="Arrow" />
-                          <span class="linkTxt">Syarat & Ketentuan</span>
+                          <span class="linkTxt">Daftar</span>
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="text-center mt-4">
-              <p>© 2024 Pustaka Tropis. Semua Hak Dilindungi.</p>
             </div>
           </div>
         </div>
@@ -1054,6 +994,7 @@
   <script src="assets/dist/libraries/swiperSlider/effects/spring-slider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
   <script src="assets/dist/js/custom.js"></script>
+  <script src="assets/dist/js/hero-slide.js"></script>
 </body>
 
 </html>
