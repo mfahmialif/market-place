@@ -26,6 +26,8 @@
 
   <link rel="stylesheet" href="assets/dist/css/animation.css" />
   <link rel="stylesheet" href="assets/dist/css/hero-slide.css" />
+  <link rel="stylesheet" href="assets/dist/css/gallery-slide.css" />
+  <link rel="stylesheet" href="assets/dist/css/fancybox.css" />
   <style>
     @media (min-width: 768px) {
       .serviceSingle {
@@ -209,32 +211,45 @@
           </nav>
 
           <!-- Hero Section -->
-          <section class="fmHero my-5 flex-grow-1 d-flex flex-column justify-content-center position-relative">
+          <section class="fmHero mb-5 mt-2 flex-grow-1 d-flex flex-column justify-content-center position-relative">
             <div class="row">
               <div class="col-md-12">
-                <div class="tagline2">Pustaka Tropis</div>
                 <div class="swiper slideHero">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide slideHero"><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></div>
-                    <div class="swiper-slide slideHero"><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></div>
-                    <div class="swiper-slide slideHero"><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></div>
+                    <div class="swiper-slide slideHero">
+                      <a data-fancybox="gallery" data-caption="Image Hero 1"
+                        href="https://swiperjs.com/demos/images/nature-6.jpg">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide slideHero">
+                      <a data-fancybox="gallery" data-caption="Image Hero 2"
+                        href="https://swiperjs.com/demos/images/nature-5.jpg">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                      </a>
+                    </div>
+                    <div class="swiper-slide slideHero">
+                      <a data-fancybox="gallery" data-caption="Image Hero 3"
+                        href="https://swiperjs.com/demos/images/nature-4.jpg">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                      </a>
+                    </div>
                   </div>
 
-                  <!-- Navigasi & Pagination -->
-                  <div class="swiper-button-next heroNext"></div>
-                  <div class="swiper-button-prev heroPrev"></div>
+                  <div class="swiper-button-next heroNext" style="background:rgb(128, 141, 112) !important"></div>
+                  <div class="swiper-button-prev heroPrev" style="background: rgb(128, 141, 112) !important"></div>
                   <div class="swiper-pagination heroPagination"></div>
                 </div>
                 <h1 class="fm-h1 text-center">
                   Edukasi Konservasi Ekosistem Tropis
                 </h1>
                 <p class="fm-desc text-center w-75 mx-auto">
-                  Kami membantu memperkuat setiap fase perjalanan Anda dalam memahami dan menjaga ekosistem tropis,
+                  Kami membantu memperkuat setiap fase perjalanan anda dalam memahami dan menjaga ekosistem tropis,
                   melalui koneksi yang kolaboratif dan edukasi yang menginspirasi untuk kelestarian ekosistem Tropis
                   yang berkelanjutan.
                 </p>
 
-                <ul class="list-unstyled fm-list-4">
+                <ul class="list-unstyled fm-list-4" style="margin-top: 20px;">
                   <li><i class="fa-solid fa-circle-check"></i>Edukasi</li>
                   <li>
                     <i class="fa-solid fa-circle-check"></i>Ekosistem Tropis
@@ -407,7 +422,7 @@
               </div>
               <h2 class="fm-h2">Edukasi dan Konservasi Ekosistem</h2>
               <p class="fm-desc">
-                Pustaka Tropis adalah perusahaan yang berkomitmen dalam
+                Pustaka Tropis adalah sebuah lembaga yang berkomitmen dalam
                 edukasi dan konservasi ekosistem tropis melalui penelitian,
                 pengelolaan lingkungan, serta peningkatan kesadaran
                 masyarakat. Kami menyediakan berbagai program edukasi dan
@@ -438,44 +453,109 @@
           <img src="assets/images/star.png" alt="Star" />
           <p>Edukasi Konservasi Ekosistem Tropis</p>
         </div>
+
+        <div class="swiper mySwiper pb-5">
+          <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide gallerySlide">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <h2 class="fm-h2">Pustaka Tropis</h2>
+                    <h2 class="fs-1 fw-bold text-brand-1">Photo Market</h2>
+                    <p class="text-muted mt-3">Enjoy our photo collections.</p>
+                    <a href="/home" class="btn btn-brush btn-brush-3 mt-3 fw-bold" style="color: #088178">Grab Now</a>
+                  </div>
+                  <div class="col-md-6 text-end">
+                    <img src="assets/images/slider/slider-1.png" alt="Banner" class="img-fluid rounded shadow"
+                      style="max-height: 800px; object-fit: cover;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide gallerySlide">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <h2 class="fm-h2">Pustaka Tropis</h2>
+                    <h2 class="fs-1 fw-bold text-brand-2">Premium Gallery</h2>
+                    <p class="text-muted mt-3">Explore high-quality photos from various exclusive categories</p>
+                    <a href="/home" class="btn btn-brush btn-brush-2 mt-3 fw-bold" style="color: #088178">Explore Now</a>
+                  </div>
+                  <div class="col-md-6 text-end">
+                    <img src="assets/images/slider/slider-1.png" alt="Banner" class="img-fluid rounded shadow"
+                      style="max-height: 800px; object-fit: cover;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Navigation -->
+          <div class="swiper-button-next galleryNext"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
         <h2 class="text-center fm-h2">Gallery</h2>
-        <div class="tagline justify-content-center">
+
+        <div class="tagline justify-content-center mt-2">
           <p class="text-center">Pustaka Tropis Telah Mendokumentasikan Berbagai Fakta Dan Kejadian Penting Terkait
             Dengan Pengelolaan, Tantangan, Ancaman Maupun Upaya Para Pihak Dalam Perlindungan Ekosistem Tropis.</p>
         </div>
+
         <div class="gallery mt-5">
           <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide1-1.jpg" alt="" />
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide1-1.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide1-1.jpg" alt="" />
+                  </a>
                 </div>
                 <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide3-1.jpg" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide2-1.jpg" alt="" />
-                </div>
-                <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide4-1.jpg" alt="" />
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide3-1.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide3-1.jpg" alt="" />
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide1-2.jpg" alt="" />
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide2-1.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide2-1.jpg" alt="" />
+                  </a>
                 </div>
                 <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide3-2.jpg" alt="" />
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide4-1.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide4-1.jpg" alt="" />
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide2-2.jpg" alt="" />
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide1-2.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide1-2.jpg" alt="" />
+                  </a>
                 </div>
                 <div class="gallerySingle">
-                  <img class="w-100 rounded-3" src="assets/images/Gallery/slide4-2.jpg" alt="" />
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide3-2.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide3-2.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallerySingle">
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide2-2.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide2-2.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="gallerySingle">
+                  <a data-fancybox="gallery" data-caption="Image Hero 3" href="assets/images/Gallery/slide4-2.jpg">
+                    <img class="w-100 rounded-3" src="assets/images/Gallery/slide4-2.jpg" alt="" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -995,6 +1075,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
   <script src="assets/dist/js/custom.js"></script>
   <script src="assets/dist/js/hero-slide.js"></script>
+  <script src="assets/dist/js/gallery-slide.js"></script>
+  <script src="assets/dist/js/fancybox.umd.js"></script>
+
+  <?php
+      if (isset($scripts) && is_array($scripts)) {
+          foreach ($scripts as $script) {
+              echo "<script src='$script'></script>\n";
+          }
+      }
+  ?>
 </body>
 
 </html>
